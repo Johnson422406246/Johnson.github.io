@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .compact-schedule {
+            width: 100%;
+            max-width: 1000px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+        
+        .compact-header {
+            background: linear-gradient(to right, #1a237e, #283593);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .compact-header h2 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+        
+        .compact-header p {
+            opacity: 0.9;
+            font-size: 16px;
+        }
+        
+        .compact-days {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .compact-day {
+            flex: 1;
+            min-width: 300px;
+            padding: 25px;
+            border-right: 1px solid #eee;
+        }
+        
+        .compact-day:last-child {
+            border-right: none;
+        }
+        
+        .day-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid;
+        }
+        
+        .day-num {
+            width: 36px;
+            height: 36px;
+            background-color: #1a237e;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+            margin-right: 12px;
+        }
+        
+        .day-name {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1a237e;
+        }
+        
+        .day-theme {
+            font-size: 14px;
+            color: #666;
+            margin-top: 4px;
+        }
+        
+        .session-block {
+            margin-bottom: 20px;
+        }
+        
+        .session-time {
+            font-weight: 600;
+            color: #1a237e;
+            margin-bottom: 8px;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .session-time::before {
+            content: "";
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #1a237e;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        
+        .session-topic {
+            padding: 8px 0 8px 18px;
+            border-left: 2px solid #e0e0e0;
+            margin-bottom: 6px;
+            font-size: 14px;
+            line-height: 1.4;
+            transition: all 0.2s;
+        }
+        
+        .session-topic:hover {
+            border-left-color: #1a237e;
+            background-color: #f8f9ff;
+        }
+        
+        .highlight-topic {
+            background-color: #fff8e1;
+            padding: 8px 12px;
+            border-radius: 6px;
+            border-left: 2px solid #ffb300;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 768px) {
+            .compact-day {
+                min-width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #eee;
+            }
+            
+            .compact-day:last-child {
+                border-bottom: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="compact-schedule">
+        <div class="compact-header">
+            <h2>掌龙蜂擎量化系统课程表</h2>
+            <p>三天实战训练营 · 从入门到商业变现的完整路径</p>
+        </div>
+        
+        <div class="compact-days">
+            <!-- 第一天 -->
+            <div class="compact-day">
+                <div class="day-title">
+                    <div class="day-num">1</div>
+                    <div>
+                        <div class="day-name">第一天：基础奠基</div>
+                        <div class="day-theme">工具掌握、核心理论与首日实盘</div>
+                    </div>
+                </div>
+                
+                <div class="session-block">
+                    <div class="session-time">上午 09:00-12:00</div>
+                    <div class="session-topic">软件安装、参数配置与账号注册</div>
+                    <div class="session-topic">实盘交易环境准备与基础操作</div>
+                    <div class="session-topic">核心消息面工具与资源网站详解</div>
+                </div>
+                
+                <div class="session-block">
+                    <div class="session-time">下午 13:30-17:00</div>
+                    <div class="session-topic">实战绘图：时区图绘制与分析</div>
+                    <div class="session-topic">多周期共振理论与顺势突破交易法</div>
+                    <div class="session-topic">揭秘"顺势而为"：赢家策略的概率优势</div>
+                </div>
+                
+                <div class="session-block">
+                    <div class="session-time">晚上 19:00-21:30</div>
+                    <div class="session-topic">风控模型基本原理</div>
+                    <div class="session-topic highlight-topic">美盘时段实盘模拟训练</div>
+                    <div class="session-topic">人工智能辅助分析工具入门</div>
+                    <div class="session-topic">首日交易数据复盘与心态建设</div>
+                </div>
+            </div>
+            
+            <!-- 第二天 -->
+            <div class="compact-day">
+                <div class="day-title">
+                    <div class="day-num">2</div>
+                    <div>
+                        <div class="day-name">第二天：系统构建</div>
+                        <div class="day-theme">硬件升级、策略合成与团队化运作</div>
+                    </div>
+                </div>
+                
+                <div class="session-block">
+                    <div class="session-time">上午 09:00-12:00</div>
+                    <div class="session-topic">实地/视频参观专业量化机房与多屏交易界面</div>
+                    <div class="session-topic">真实盈亏案例分析</div>
+                </div>
+                
+                <div class="session-block">
+                    <div class="session-time">下午 13:30-17:00</div>
+                    <div class="session-topic">风控机房搭建原理与实战案例解析</div>
+                </div>
+                
+                <div class="session-block">
+                    <div class="session-time">晚上 19:00-21:30</div>
+                    <div class="session-topic">多策略组合信号源的搭建原理</div>
+                    <div class="session-topic">量化交易团队的架构与分工</div>
+                    <div class="session-topic highlight-topic">专题实操：搭建多策略信号源，并入驻跟单社区实现收益转化</div>
+                </div>
+            </div>
+            
+            <!-- 第三天 -->
+            <div class="compact-day">
+                <div class="day-title">
+                    <div class="day-num">3</div>
+                    <div>
+                        <div class="day-name">第三天：商业变现</div>
+                        <div class="day-theme">模式定位、财富路径与影响力打造</div>
+                    </div>
+                </div>
+                
+                <div class="session-block">
+                    <div class="session-time">上午 09:00-12:00</div>
+                    <div class="session-topic">七大发展路径剖析：交易员、信号商、资管方、培训师、工程师、风控师、俱乐部主理人</div>
+                    <div class="session-topic">如何从0到1打造盈利性量化交易俱乐部</div>
+                </div>
+                
+                <div class="session-block">
+                    <div class="session-time">下午 13:30-17:00</div>
+                    <div class="session-topic">普通人通过量化交易实现千万级收入的路径规划</div>
+                    <div class="session-topic">打造"助教系统"与交易圈层，实现共赢与规模化</div>
+                </div>
+                
+                <div class="session-block">
+                    <div class="session-time">晚上 19:00-21:30</div>
+                    <div class="session-topic">量化交易KOL的推广方法与内容策略</div>
+                    <div class="session-topic highlight-topic">腾讯直播间搭建与每日实盘直播流程</div>
+                    <div class="session-topic">"大家来找茬"：直播间互动式信号模型训练</div>
+                    <div class="session-topic">每日交易计划与总结的公众化呈现</div>
+                    <div class="session-topic">线下沙龙组织与高阶实训</div>
+                    <div class="session-topic">社交媒体精准引流与个人IP塑造</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
